@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>postman</title>
+	<style>
+
+</style>
+
+</head>
+<body ng-app='user' ng-controller="loginController">
+<nav>
+<ul>
+  <li><a href="#/home">Home</a></li>
+  <li><a ng-if="user " href="#/myprofile">profile</a></li>
+  <li ><a class="active" href="#about">About us</a></li>
+  <li ng-if="user "  style="float:right" class="dropdown"><a  ng-click="signout()" >signout</a></li>
+  <li ng-if="user "  style="float:right" class="active"><a href="#/myprofile">{{accountUser}}</a></li>
+  
+   <li ng-if="!user "  style="float:right" class="dropdown">
+    <a  href="javascript:void(0)"  class="dropbtn">logIn/ signUp</a>
+  <div class="dropdown-content">
+      <a href="/#/signup">signup</a>
+      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;  background-color: white;
+   padding: 2% 30% 2% 21%;
+    
+    border: none;
+    ">Login</button>
+
+    
+    </div>
+  </li>
+
+</ul>
+</nav>
+
+	<ng-view></ng-view>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" >
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container"  >
+    <h1>{{fuck}}</h1>
+      <p style="color: red" ng-model="msg">{{msg}}</p>
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter email" ng-model="email" required>
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" ng-model="password" required>
+      <input type="checkbox" checked="checked"> Remember me<br>  
+      <button type="submit" ng-click="login()" >Login</button>
+      
+
+    </div>
+    <div><a   onclick="document.getElementById('id01').style.display='none'" href="/#/signup">new account</a></div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+</body>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular-route/angular-route.js"></script>
+	<script src="app/account/profile.js"></script>
+	<script src="app/account/B.js"></script>
+		<script src="app/account/signup.js"></script>
+	<script src="app/account/MAIN.js"></script>
+	<script src="app/services.js"></script>
+	<script src="app/app.js"></script>
+	<script src="app/account/MAIN.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+  <link rel="stylesheet" type="text/css" href="style/style-index.css">
+
+</html>
