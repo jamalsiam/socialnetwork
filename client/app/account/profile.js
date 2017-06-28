@@ -95,20 +95,25 @@ angular.module('profile', [])
 
     }
 
-    // [
+    //[
     // {
-    //   likes: [id,id,id],
+    //   _id,
+    //   likes: [post_id,post_id,post_id],
     //   comments: {
-    //     id:"hi",
-    //     id: "test"
-    //   }
-    //   friends: [id, id, id],
+    //     post_id:"hi",
+    //     post_id: "test"
+    //   },
+    //   friends: [friend_id, friend_id, friend_id],
     //   posts: {
-    //     likes:[id,id],
-    //     comments:{
-    //       id:"hi"
-    //     },
-    //     text:"asdasadsadssadsadsad"
+      //     [
+      //     likes:[friend_id,friend_id,friend_id],
+      //     comments:{
+      //       id:"hi"
+      //     },
+      //     text:"asdasadsadssadsadsad"
+      //    ],
+      //    [
+      //    ]
     //   }
     // }
 //   ,{
